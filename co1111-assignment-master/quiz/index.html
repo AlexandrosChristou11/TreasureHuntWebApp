@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>DAC Treasure Hunt</title>
+        <meta charset="UTF-8">
+        <meta lang="en-UK">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../style/style.css" type="text/css">
+        <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
+        <link rel="icon" type="image/x-icon" href="../images/dac.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script type="text/javascript" defer>
+            let acc = document.getElementsByClassName("accordion");
+            let i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    let panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153482744-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-153482744-1');
+        </script>
+        <meta charset="UTF-8">
+    </head>
+    <body class="margin-free">
+        <header>
+            <h1 class="titleHeading" onclick="window.location.href = '../';" style="cursor: pointer;">DAC TREASURE HUNT</h1>
+            <ul class="linkList">
+                <li><a href="https://www.instagram.com/DAC_Treasure_Hunt" target="_blank"><img style="height: 30px;" alt="Instagram Logo" src="../images/icons/instagram.png"></a></li>
+                <li><a href="https://www.facebook.com/pg/DAC-Treasure-Hunt-110038270472900" target="_blank"><img style="height: 30px;" alt="Facebook Logo" src="../images/icons/facebook.png"></a></li>
+                <li><a href="https://twitter.com/HuntDac" target="_blank"><img style="height: 30px;" alt="Twitter Logo" src="../images/icons/twitter.png"></a></li>
+                <li><a href="https://github.com/dgrebenin/co1111-assignment" target="_blank">
+                    <img alt="GitHub Logo" style="height: 30px;" src="../images/icons/github.png"></a></li>
+                <li id="creators" class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Creators</a>
+                    <div class="dropdown-content">
+                        <a  href="https://github.com/dgrebenin"> Dmitry Grebenin
+                            <p>Web Developer</p></a>
+                        <a class="linklistRow" style="background-color: white" href="https://github.com/achristou4">Alexandros Christou
+                            <p>Web Developer | Designer </p></a>
+                        <a href="https://github.com/cmouskovia">Charalampos Mouskovia
+                            <p> Web Developer | Media</p></a>
+                    </div>
+                </li>
+                <li id="homeRight">
+                    <a href="../index.html"><i class="fa fa-home" id="home"></i></a>
+                </li>
+            </ul>
+        </header>
+        <main>
+            <ul id="huntList"></ul>
+            <div style="margin-top: 30%" class="loader loader-big loader-dark"></div>
+        </main>
+    </body>
+    <script src="../script/moment.js"></script>
+    <script src="../script/script.js" type="text/javascript"></script>
+    <script>
+        getHuntList(false);
+    </script>
+</html>

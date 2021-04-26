@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+* {
+    font-family: Ubuntu, sans-serif;
+}
+#media{
+    margin: 20px;
+    text-shadow: 1px 1px 1px dodgerblue;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.twitter{
+    border: 1px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+.done {
+    display: block;
+    background-color: green;
+    color: white;
+}
+
+.loading {
+    display: block;
+    background-color: orange;
+    color: white;
+}
+
+.error {
+    display: block;
+    background-color: darkred;
+    color: white;
+}
+
+.disable {
+    display: none;
+}
+
+.outputMSG {
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 80%;
+    max-width: 27%;
+    animation: slide-up 0.4s ease;
+    z-index: 11;
+}
+.button {
+    border: none;
+    margin: 3px;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    background-color:#d8d6d6;
+    border-radius: 3px;
+}
+
+.submitButton {
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.questionInfo {
+    border-width: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    animation: slide-right 0.4s ease;
+}
+
+#qrCode {
+    border: 7px solid #d8d6d6;
+    background: #d8d6d6 url(../images/icons/qrcode.png) no-repeat;
+    background-size: 50px;
+    float: right;
+}
+
+.questionInfo>p {
+    max-width: 100%;
+    margin: 15px 0;
+}
+
+.scoreBox {
+    position: absolute;
+    margin-top: 400px;
+    float: left;
+    bottom: 10px;
+}
+
+#qrCode {
+    float: left;
+    top: 200px;
+}
+
+#questionText{
+    margin-top:10px;
+    text-align: center;
+}
+
+input[type='text'], input[type='number'] {
+    font-size: large;
+}
+
+.margin-free {
+    margin: 0;
+}
+
+.titleHeading {
+    color: white;
+    text-shadow: 4px 4px 4px black;
+    text-align: center;
+    margin: 3%;
+}
+
+#treasure {
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+#instructions {
+    font-size: 35px;
+    background-color: #fcffbe;
+    color: black;
+    text-shadow: 2px 2px #bfbfbf;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    text-decoration:underline;
+}
+
+#welcoming {
+    background-color: #fcffbe;
+    border: 2px solid black;
+    margin: auto;
+    padding: 10px;
+    width: 80%;
+}
+
+#joker {
+    height: 100px;
+    width: 100px;
+    border: 1px solid white;
+    border-radius: 30%;
+    margin: 20px auto;
+    display: block;
+}
+
+#goQuiz {
+    text-align: center;
+    box-shadow: 5px 5px 10px #333333;
+    border: 2px solid black;
+    background: whitesmoke;
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    margin: auto;
+    width: 50%;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+#goQuiz:active {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+}
+
+header {
+    overflow: hidden;
+    background-color: #865114;
+    box-shadow: 1px 1px 10px black;
+}
+.linkList {
+    list-style-type: none;
+    height: 35px;
+    background-color: #e68a00;
+    margin: 0;
+    padding: 0 0 3px;
+}
+
+.linkList>li {
+    float: left;
+    padding-top: 5px;
+}
+
+.linkList>li>a {
+    text-decoration: none;
+    margin: 0 5px;
+}
+.linklistRow {
+    background-color: #bfbfbf;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.dropbtn {
+    display: inline-block;
+    padding-top: 6px;
+    color: black;
+    text-align: center;
+}
+
+.linkList>li:hover, .dropdown:hover .dropbtn {
+    background-color: #e6e600;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 3px 3px 10px black;
+    z-index: 1;
+    margin-left: -30px;
+
+
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#huntList {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    max-width: 500px;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    /*padding: 18px;*/
+    /*width: 18%;*/
+    border: none;
+    border-radius: 50%;
+    margin-left: 10px;
+    text-align: left;
+    outline: none;
+    font-size: 10px;
+    transition: 0.4s;
+}
+
+.dropInfo {
+    width:45px;
+
+}
+
+#contentInfo {
+    width: 370px;
+    border: 1px solid black;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.panel {
+    display: contents;
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    position: absolute;
+    transition: max-height 0.2s ease-out;
+}
+
+.helpClosed {
+    display: none;
+}
+
+.guidance {
+    height: 20px;
+    background-color: #444444;
+}
+.tableRows {
+    background-color: #d9d9d9;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+#homepage {
+    float: right;
+    font-size: 34px;
+      background-color: #d8d6d6;
+}
+
+#preview {
+    width: 300px;
+    height: 300px;
+    display: block;
+
+}
+
+.qrWindow {
+    position: fixed;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: #a8a8a8;
+    box-shadow: 2px 2px 2px black;
+    padding: 5px;
+    animation: slide-up 0.4s ease;
+}
+
+.removing {
+    animation: slide-down 0.4s ease;
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.cameraExit {
+    display: block;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#skipBox, #errorSkip {
+    display: inline-block;
+    left: 0;
+    float: right;
+}
+
+#skipBox {
+    background: #d8d6d6;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+}
+
+#videoOut {
+    max-width: 100%;
+}
+
+.loader {
+    margin: auto;
+    border: solid #f3f3f3; /* Light grey */
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+.loader-big {
+    border-width: 16px;
+    width: 120px;
+    height: 120px;
+}
+
+.loader-small {
+    border-width: 4px;
+    width: 20px;
+    height: 20px;
+}
+
+.loader-dark {
+    border-top-color: #865114;
+}
+
+.loader-light {
+    border-top-color: #e59d14;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+main {
+    margin: 10px;
+    animation: slide-up 0.4s ease;
+}
+
+.answerForm>input {
+    display: block;
+    margin: 3px auto;
+}
+
+.treasureHunt {
+    text-decoration: none;
+    color: black;
+}
+
+.treasureHuntCard {
+    background-color: #d8d6d6;
+    box-shadow: 5px 5px 9px #00000080;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
+
+.thName {
+    background-color: #e68a00;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+.thInfo {
+    list-style-type: none;
+    padding: 10px;
+}
+
+#usernamePopupBG {
+    padding: 10px;
+    position: fixed;
+    background-color: rgba(64, 64, 64, 0.3);
+    backdrop-filter: blur(2px);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+#usernamePopup {
+    margin: 40vh auto;
+    background-color: #d8d6d6;
+    box-shadow: 5px 5px 9px #00000080;
+    max-width: 500px;
+    min-width: 250px;
+    min-height: 150px;
+    border-radius: 5px;
+    animation: slide-up 0.4s ease;
+}
+
+.closeButton {
+    float: right;
+    background: none;
+    border: none;
+    font-size: large;
+}
+
+#usernameForm {
+    padding: 30px;
+    margin: auto;
+}
+
+#usernameField {
+    margin-bottom: 10px;
+    width: -moz-available;
+    /*noinspection CssInvalidPropertyValue*/
+    width: -webkit-fill-available;
+}
+
+#formLabel {
+    font-weight: bold;
+}
+#homeRight{
+    float: right;
+}
+#home{
+    color: black;
+    font-size: 32px;
+}
+
+@media screen and (max-width: 265px) {
+    #creators {
+        display: none;
+    }
+}
